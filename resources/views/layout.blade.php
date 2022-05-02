@@ -101,17 +101,15 @@
 
 <div class="site-output">
 
-    @if (session('alert'))
-        <div class="alert alert-success">
-            {{ session('alert') }}
-        </div>
-    @endif
+{{--    @if (session('alert'))--}}
+{{--        <div class="alert alert-success">--}}
+{{--            {{ session('alert') }}--}}
+{{--        </div>--}}
+{{--    @endif--}}
         <div id="all-output" class="col-md-12">
         <div class="row">
             @yield('content')
-            <pre dir="ltr">
-            {{var_dump(session()->all())}}
-    </pre>
+
         </div>
     </div>
     <script src="{{asset('js/main.js')}}"></script>
