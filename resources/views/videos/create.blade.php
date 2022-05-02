@@ -10,15 +10,15 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
-                            <label>عنوان</label>
-                            <input name="name" type="text" class="form-control" placeholder="عنوان">
+                            <label>@lang('videos.name')</label>
+                            <input name="name" type="text" class="form-control" placeholder="@lang('videos.name')">
                         </div>
                         <div class="col-md-6">
-                            <label>مدت زمان</label>
-                            <input type="text" name="length" class="form-control" placeholder="مدت زمان">
+                            <label>@lang('videos.length')</label>
+                            <input type="text" name="length" class="form-control" placeholder="@lang('videos.length')">
                         </div>
                         <div class="col-md-6">
-                            <label>نام یکتا</label>
+                            <label>@lang('videos')</label>
                             <input type="text" name="slug" class="form-control" placeholder="نام یکتا">
                         </div>
                         <div class="col-md-6">

@@ -28,7 +28,7 @@ class videoController extends Controller{
         ]);
         video::create($request->all());
        // dd($request->all());
-        return redirect()->route('index')->with('alert','عملیات موفقیت آمیز بود');
+        return redirect()->route('index')->with('alert',__('message.success'));
 
 
 }

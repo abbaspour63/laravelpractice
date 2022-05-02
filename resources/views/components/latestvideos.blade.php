@@ -3,7 +3,7 @@
     <div class="row">
         <!-- video-item -->
         @foreach($videos as $video)
-            <div class="col-lg-2 col-md-4 col-sm-6">
+            {{-- <div class="col-lg-2 col-md-4 col-sm-6">
                 <div class="video-item">
                     <div class="thumb">
                         <div class="hover-efect"></div>
@@ -18,7 +18,8 @@
                         <span class="date"><i class="fa fa-clock-o"></i>{{$video->created_at}} </span>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+            <x-video-box :video="$video"></x-video-box> 
         @endforeach
 </div>
 </div>
