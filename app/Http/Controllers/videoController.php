@@ -18,9 +18,16 @@ class videoController extends Controller{
 
     public function store (Request $request)
     {
+
+        $request->validate([
+            'name'=>['required'],
+            'length'=>['required','integer'],
+            'slug'=>['required','unique:videos,slug'],
+            'url'=>['required','url'],
+            'thumbnail'=>['required','url']
+        ]);
         video::create($request->all());
        // dd($request->all());
-//
         return redirect()->route('index')->with('alert','عملیات موفقیت آمیز بود');
 
 
