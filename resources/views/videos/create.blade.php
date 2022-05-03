@@ -11,23 +11,23 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label>@lang('videos.name')</label>
-                            <input name="name" type="text" class="form-control" placeholder="@lang('videos.name')">
+                            <input name="name" type="text" value="{{old("name")}}" class="form-control" placeholder="@lang('videos.name')">
                         </div>
                         <div class="col-md-6">
                             <label>@lang('videos.length')</label>
-                            <input type="text" name="length" class="form-control" placeholder="@lang('videos.length')">
+                            <input type="text" name="length" value="{{old("length")}}" class="form-control" placeholder="@lang('videos.length')">
                         </div>
                         <div class="col-md-6">
                             <label>@lang('videos')</label>
-                            <input type="text" name="slug" class="form-control" placeholder="نام یکتا">
+                            <input type="text" name="slug" value="{{old("slug")}}" class="form-control" placeholder="نام یکتا">
                         </div>
                         <div class="col-md-6">
                             <label>آدرس ویدیو</label>
-                            <input type="text" name="url" class="form-control" placeholder="آدرس ویدیو">
+                            <input type="text" name="url" value="{{old("url")}}" class="form-control" placeholder="آدرس ویدیو">
                         </div>
                         <div class="col-md-6">
                             <label>تصویر بند‌انگشتی</label>
-                            <input type="text" name="thumbnail" class="form-control" placeholder="تصویر بند انگشتی">
+                            <input type="text" name="thumbnail" {{old("thumbnail")}} class="form-control" placeholder="تصویر بند انگشتی">
                         </div>
                         <div class="col-md-12">
                             <label>توضیحات</label>
