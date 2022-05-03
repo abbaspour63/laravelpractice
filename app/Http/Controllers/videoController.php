@@ -22,13 +22,14 @@ class videoController extends Controller{
         $request->validate([
             'name'=>['required'],
             'length'=>['required','integer'],
-            'slug'=>['required','unique:videos,slug'],
+            'slug'=>['required','unique:videos,slug','alpha_dash'],
             'url'=>['required','url'],
             'thumbnail'=>['required','url']
         ]);
         video::create($request->all());
        // dd($request->all());
         return redirect()->route('index')->with('alert',__('message.success'));
+
 }
 }
 
