@@ -39,10 +39,10 @@ class storevideoRequest extends FormRequest
 //        ]);
 //    }
 
-    protected function prepareForValidation()
-    {
-        $this->merge([
-            'slug' => Str::slug($this->slug),
-        ]);
-    }
+//    protected function prepareForValidation()
+//    {
+//        $this->merge([
+//            'slug' => Str::slug($this->slug),
+//        ]);
+//    }
 }

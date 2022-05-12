@@ -24,6 +24,7 @@ class Indexcontroller extends Controller
 
 
 
+
      //dd($videos);
 //     return view('index',[
 //           'videos'=>$videos,
