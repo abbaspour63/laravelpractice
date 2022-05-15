@@ -12,6 +12,11 @@ class  video extends Model{
        ];
        //protected  $guarded=[];
        //Accessor in laravel
+       public function getRouteKeyName()
+       {
+         
+        return 'slug';
+       }
        public function getlengthAttribute($value){
            return $value.'ثانیه';
 
@@ -26,8 +31,9 @@ class  video extends Model{
       //  }
       public function relatedVideos(int $count=6){
         return video::all()->random($count);
-        
+
       }
+      
        
       }
 

@@ -24,13 +24,7 @@
     <!-- Responsive CSS -->
 
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    
 </head>
 
 <body>
@@ -112,10 +106,12 @@
                         <div class="thumb">
                             <div class="hover-efect"></div>
                             <small class="time">{{$video->length}}</small>
-                            <a href="#"><img src={{$video->thumbnail}} alt=""></a>
+                            <a href="{{ route('videos.show',$video->slug) }}"><img src={{$video->thumbnail}} alt=""></a>
                         </div>
                         <div class="video-info">
-                            <a href="#" class="title">{{$video->name}} </a>
+                            <a href="" class="title">{{$video->name}} </a>
+                            {{-- <a href="{{ route('videos.edit') }}"></a>
+                            <i class="fa fa-pencil"></i> --}}
                             <a class="channel-name" href="#">مهرداد سامی<span>
                                     <i class="fa fa-check-circle"></i></span></a>
                             <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>

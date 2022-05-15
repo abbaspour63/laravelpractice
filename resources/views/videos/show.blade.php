@@ -125,7 +125,7 @@
                 </div><!-- // watch -->
             </div><!-- // col-md-8 -->
           <div class="col-md-4">
-        
+           <x-related-videos :video="$video" />
         </div>
 
 @endsection

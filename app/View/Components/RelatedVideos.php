@@ -15,7 +15,7 @@ class RelatedVideos extends Component
      */
     public function __construct(video $video)
     {
-      $this->videos=$video->relatedvideos(10);
+      $this->videos=$video->relatedvideos(5);
     }
 
     /**
