@@ -106,6 +106,7 @@
 
             <!-- video-item -->
             @foreach($videos  as $video)
+
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <div class="video-item">
                         <div class="thumb">
@@ -123,7 +124,7 @@
                     </div>
                 </div>
             @endforeach
-            
+
         <h1 class="new-video-title"><i class="fa fa-bolt"></i> پربازدیدترین ویدیوها</h1>
         <div class="row">
             <div class="col-lg-2 col-md-4 col-sm-6">

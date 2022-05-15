@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Models\video;
 //use http\Env\Request;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\DocBlock\Tags\Var_;
 
 class videoController extends Controller{
 
@@ -19,17 +20,15 @@ class videoController extends Controller{
     public function store (Request $request)
     {
 
-        $request->validate([
-            'name'=>['required'],
-            'length'=>['required','integer'],
-            'slug'=>['required','unique:videos,slug','alpha_dash'],
-            'url'=>['required','url'],
-            'thumbnail'=>['required','url']
-        ]);
         video::create($request->all());
-       // dd($request->all());
         return redirect()->route('index')->with('alert',__('message.success'));
+}
 
+    public function show (Request $request,  int $id)
+    {
+        $video=video::find($id);
+        //dd($video);
+        return   view('videos.show',compact('video'));
 }
 }
 

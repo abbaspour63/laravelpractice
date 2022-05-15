@@ -13,7 +13,7 @@ class VideoBox extends Component
      */
     public function __construct()
     {
-        
+
     }
 
     /**
@@ -24,7 +24,6 @@ class VideoBox extends Component
     public function render()
     {
         return view('components.video-box');
-        
-        
+
     }
 }

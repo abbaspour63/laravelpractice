@@ -32,17 +32,12 @@ class storevideoRequest extends FormRequest
             'thumbnail' => ['required', 'url']
         ];
     }
-//    protected function prepareForValidation()
-//    {
-//        $this->messages([
-//
-//        ]);
-//    }
 
-//    protected function prepareForValidation()
-//    {
-//        $this->merge([
-//            'slug' => Str::slug($this->slug),
-//        ]);
-//    }
+
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'slug' => Str::slug($this->slug),
+        ]);
+    }
 }

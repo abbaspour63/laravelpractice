@@ -9,18 +9,15 @@ class Indexcontroller extends Controller
 {
     public function  index()
     {
-
+        $videos=video::latest()->take(6)->get();
         $mostpopularvideos = Video::all()->random(6);
         $mostviewedvideos = Video::all()->random(6);
-        return view('index', compact('mostpopularvideos', 'mostviewedvideos'));
+        return view('index', compact('videos','mostviewedvideos','mostpopularvideos'));
 
        // dd("Index Controller");
        //return view('index');
-     //$videos=video::latest()->take(6)->get();
-   //  dd(video::all());
 
-     $mostpopularvideos=video::all()->random(6);
-     $mostviewedvideos=video::all()->random(6);
+   //  dd(video::all());
 
 
 

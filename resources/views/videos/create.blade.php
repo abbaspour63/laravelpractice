@@ -10,15 +10,15 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
-                            <label>@lang('videos.name')</label>
-                            <input name="name" type="text" value="{{old("name")}}" class="form-control" placeholder="@lang('videos.name')">
+                            <label></label>
+                            <input name="name" type="text" value="{{old("name")}}" class="form-control" placeholder="">
                         </div>
                         <div class="col-md-6">
-                            <label>@lang('videos.length')</label>
-                            <input type="text" name="length" value="{{old("length")}}" class="form-control" placeholder="@lang('videos.length')">
+                            <label></label>
+                            <input type="text" name="length" value="{{old("length")}}" class="form-control" placeholder="">
                         </div>
                         <div class="col-md-6">
-                            <label>@lang('videos')</label>
+                            <label></label>
                             <input type="text" name="slug" value="{{old("slug")}}" class="form-control" placeholder="نام یکتا">
                         </div>
                         <div class="col-md-6">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-12">
                             <label>توضیحات</label>
-                            <textarea class="form-control" name="description" rows="4" placeholder="توضیح"></textarea>
+                            <textarea class="form-control" name="description"  value="{{old("description")}}" rows="4" placeholder="توضیح"></textarea>
                         </div>
                         <div class="col-md-2">
                             <button type="submit" id="contact_submit" class="btn btn-dm">ذخیره</button>
